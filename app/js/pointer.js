@@ -15,7 +15,6 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global ACTIONS MODES SETTINGS TABS */
 "use strict"
 
 const {clipboard} = require("electron")
@@ -354,3 +353,8 @@ module.exports = {
     startOfPage,
     endOfPage
 }
+
+const TABS = require("./tabs")
+const ACTIONS = require("./actions")
+const MODES = require("./modes")
+const SETTINGS = require("./settings")

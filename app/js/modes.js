@@ -15,7 +15,6 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global ACTIONS COMMANDHISTORY POINTER FOLLOW SETTINGS SUGGEST TABS */
 "use strict"
 
 const modes = {
@@ -133,3 +132,11 @@ const currentMode = () => document.body.getAttribute("current-mode")
 const allModes = () => Object.keys(modes)
 
 module.exports = {init, setMode, currentMode, allModes}
+
+const TABS = require("./tabs")
+const ACTIONS = require("./actions")
+const COMMANDHISTORY = require("./commandhistory")
+const POINTER = require("./pointer")
+const FOLLOW = require("./follow")
+const SETTINGS = require("./settings")
+const SUGGEST = require("./suggest")

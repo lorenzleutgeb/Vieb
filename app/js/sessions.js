@@ -15,13 +15,13 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global SETTINGS UTIL */
 "use strict"
 
 const {ipcRenderer} = require("electron")
 const path = require("path")
 const fs = require("fs")
 const https = require("https")
+const UTIL = require("./util")
 
 const blocklistDir = path.join(UTIL.appData(), "blocklists")
 const defaultBlocklists = {
@@ -98,3 +98,5 @@ const enableAdblocker = () => {
 const setSpellLang = lang => ipcRenderer.send("set-spelllang", lang)
 
 module.exports = {init, create, enableAdblocker, disableAdblocker, setSpellLang}
+
+const SETTINGS = require("./settings")

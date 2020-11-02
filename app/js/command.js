@@ -15,12 +15,11 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global COMMANDHISTORY FAVICONS HISTORY INPUT MODES PAGELAYOUT
- SETTINGS TABS UTIL */
 "use strict"
 
 const {ipcRenderer} = require("electron")
 const path = require("path")
+const MODES = require("./modes")
 
 const listSetting = setting => {
     if (setting === "all") {
@@ -723,3 +722,12 @@ module.exports = {
     commandList,
     customCommandsAsCommandList
 }
+
+const TABS = require("./tabs")
+const FAVICONS = require("./favicons")
+const COMMANDHISTORY = require("./commandhistory")
+const HISTORY = require("./history")
+const SETTINGS = require("./settings")
+const PAGELAYOUT = require("./pagelayout")
+const INPUT = require("./input")
+const UTIL = require("./util")

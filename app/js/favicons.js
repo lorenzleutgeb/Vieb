@@ -15,12 +15,12 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* globals HISTORY SETTINGS TABS UTIL */
 "use strict"
 
 const {ipcRenderer} = require("electron")
 const path = require("path")
 const fs = require("fs")
+const UTIL = require("./util")
 
 const faviconFolder = path.join(UTIL.appData(), "favicons")
 const mappingFile = path.join(faviconFolder, "mappings")
@@ -204,3 +204,7 @@ const forSite = url => {
 }
 
 module.exports = {init, updateMappings, loading, empty, show, update, forSite}
+
+const TABS = require("./tabs")
+const HISTORY = require("./history")
+const SETTINGS = require("./settings")

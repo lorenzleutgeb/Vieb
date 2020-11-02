@@ -15,7 +15,6 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global POINTER MODES TABS SETTINGS UTIL */
 "use strict"
 
 let followNewtab = true
@@ -268,3 +267,9 @@ module.exports = {
     enterKey,
     getModeBeforeFollow
 }
+
+const TABS = require("./tabs")
+const MODES = require("./modes")
+const SETTINGS = require("./settings")
+const UTIL = require("./util")
+const POINTER = require("./pointer")

@@ -15,7 +15,6 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global MODES SUGGEST */
 "use strict"
 
 const previousCommands = []
@@ -91,3 +90,6 @@ const push = command => {
 }
 
 module.exports = {init, pause, resume, previous, next, resetPosition, push}
+
+const MODES = require("./modes")
+const SUGGEST = require("./suggest")

@@ -15,8 +15,6 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global ACTIONS COMMAND POINTER FOLLOW MODES PAGELAYOUT SETTINGS
- SUGGEST TABS UTIL */
 "use strict"
 
 const {ipcRenderer} = require("electron")
@@ -958,3 +956,14 @@ module.exports = {
     unmap,
     clearmap
 }
+
+const TABS = require("./tabs")
+const ACTIONS = require("./actions")
+const MODES = require("./modes")
+const COMMAND = require("./command")
+const POINTER = require("./pointer")
+const FOLLOW = require("./follow")
+const SETTINGS = require("./settings")
+const PAGELAYOUT = require("./pagelayout")
+const SUGGEST = require("./suggest")
+const UTIL = require("./util")

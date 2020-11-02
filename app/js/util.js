@@ -15,7 +15,6 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global SETTINGS */
 "use strict"
 
 const {ipcRenderer} = require("electron")
@@ -392,7 +391,7 @@ const appName = () => {
 
 const appData = () => {
     if (!appDataPath) {
-        appDataPath = ipcRenderer.sendSync("appdata-path")
+        appDataPath = ipcRenderer && ipcRenderer.sendSync("appdata-path") || ""
     }
     return appDataPath
 }
@@ -445,3 +444,5 @@ module.exports = {
     firefoxUseragent,
     sameDomain
 }
+
+const SETTINGS = require("./settings")

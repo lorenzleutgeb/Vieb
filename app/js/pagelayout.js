@@ -15,7 +15,6 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global SETTINGS UTIL TABS */
 "use strict"
 
 const layoutDivById = id => document.querySelector(
@@ -367,3 +366,7 @@ module.exports = {
     resetResizing,
     applyLayout
 }
+
+const TABS = require("./tabs")
+const UTIL = require("./util")
+const SETTINGS = require("./settings")

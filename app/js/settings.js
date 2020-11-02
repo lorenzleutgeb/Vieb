@@ -15,11 +15,11 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global COMMAND INPUT MODES PAGELAYOUT POINTER SESSIONS TABS UTIL */
 "use strict"
 
 const path = require("path")
 const {ipcRenderer} = require("electron")
+const UTIL = require("./util")
 
 const defaultSettings = {
     "adblocker": "static",
@@ -879,3 +879,11 @@ module.exports = {
     getCustomStyling,
     updateCustomStyling
 }
+
+const TABS = require("./tabs")
+const INPUT = require("./input")
+const MODES = require("./modes")
+const COMMAND = require("./command")
+const POINTER = require("./pointer")
+const SESSIONS = require("./sessions")
+const PAGELAYOUT = require("./pagelayout")

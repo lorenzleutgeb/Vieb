@@ -15,13 +15,12 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global ACTIONS POINTER FAVICONS FOLLOW HISTORY INPUT MODES
- PAGELAYOUT SESSIONS SETTINGS UTIL */
 "use strict"
 
 const fs = require("fs")
 const path = require("path")
 const {ipcRenderer, shell} = require("electron")
+const UTIL = require("./util")
 
 let recentlyClosed = []
 let linkId = 0
@@ -899,3 +898,14 @@ module.exports = {
     moveTabForward,
     moveTabBackward
 }
+
+const INPUT = require("./input")
+const SESSIONS = require("./sessions")
+const ACTIONS = require("./actions")
+const MODES = require("./modes")
+const FAVICONS = require("./favicons")
+const POINTER = require("./pointer")
+const FOLLOW = require("./follow")
+const SETTINGS = require("./settings")
+const PAGELAYOUT = require("./pagelayout")
+const HISTORY = require("./history")

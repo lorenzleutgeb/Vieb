@@ -15,8 +15,6 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global COMMAND COMMANDHISTORY FOLLOW MODES PAGELAYOUT SETTINGS SUGGEST TABS
- UTIL */
 "use strict"
 
 const {exec} = require("child_process")
@@ -434,3 +432,13 @@ module.exports = {
     useEnteredData,
     setFocusCorrectly
 }
+
+const TABS = require("./tabs")
+const MODES = require("./modes")
+const COMMAND = require("./command")
+const COMMANDHISTORY = require("./commandhistory")
+const FOLLOW = require("./follow")
+const SETTINGS = require("./settings")
+const PAGELAYOUT = require("./pagelayout")
+const SUGGEST = require("./suggest")
+const UTIL = require("./util")

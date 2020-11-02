@@ -15,11 +15,11 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-/* global COMMAND HISTORY INPUT MODES SETTINGS TABS UTIL */
 "use strict"
 
 const path = require("path")
 const fs = require("fs")
+const UTIL = require("./util")
 
 let suggestions = []
 let originalValue = ""
@@ -406,3 +406,10 @@ module.exports = {
     suggestExplore,
     suggestCommand
 }
+
+const TABS = require("./tabs")
+const INPUT = require("./input")
+const MODES = require("./modes")
+const COMMAND = require("./command")
+const HISTORY = require("./history")
+const SETTINGS = require("./settings")
