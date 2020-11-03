@@ -358,8 +358,9 @@ const setFocusCorrectly = () => {
         }
     } else {
         urlElement.blur()
+        // The following cause copy&paste in the webview to fail:
         window.focus()
-        document.getElementById("invisible-overlay").focus()
+        // document.getElementById("invisible-overlay").focus()
     }
 }
 

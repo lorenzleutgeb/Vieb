@@ -246,8 +246,11 @@ const init = () => {
             } else if (["explore", "command"].includes(MODES.currentMode())) {
                 ACTIONS.toNormalMode()
             }
+        } else {
+            // Only prevent default if nomouse is set.
+            // This is required for middle-button paste to work in the url bar.
+            e.preventDefault()
         }
-        e.preventDefault()
         ACTIONS.setFocusCorrectly()
     })
     window.addEventListener("mousemove", e => {
