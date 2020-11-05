@@ -246,7 +246,8 @@ const enterKey = async id => {
             TABS.addTab({
                 "url": link.url,
                 "inverted": false,
-                "switchTo": !stayInFollowMode
+                // (TODO: add setting) !stayInFollowMode
+                "switchTo": false
             })
             return
         }
