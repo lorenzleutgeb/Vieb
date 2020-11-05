@@ -415,10 +415,10 @@ const closeTab = (index = null) => {
                 addTab()
             }
         }
-        if (oldTabIndex === 0) {
-            switchToTab(0)
-        } else if (isClosingCurrent) {
+        if (oldTabIndex === listTabs().length) {
             switchToTab(oldTabIndex - 1)
+        } else {
+            switchToTab(oldTabIndex)
         }
     }
     listTabs().forEach(t => {
